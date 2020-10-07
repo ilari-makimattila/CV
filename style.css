@@ -1,0 +1,177 @@
+@page {
+  margin: 1.2cm 1.2cm;
+  size: A4 portrait;
+  marks: none;
+}
+
+h2 {
+  margin: 0.5em 0;
+}
+
+h3 {
+  margin: 1.5ex 0 1ex;
+}
+
+ul {
+  margin: 0;
+  padding-left: 3ex;
+}
+
+html {
+  background: #efefef;
+  font-size: 13pt;
+}
+
+@media print {
+  html {
+    background: white;
+  }
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header header" "main aside";
+  grid-template-rows: 10ex 1fr;
+  grid-template-columns: 1fr 30ch;
+  grid-gap: 2px;
+  background: white /*url(cv-code.png) no-repeat 450%*/;
+
+  width: 21cm;
+  margin: 1em auto;
+  padding: 1.2cm 1.2cm;
+
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+header {
+  grid-area: header;
+  background: #ebebeb;
+  padding: 1ex;
+  break-inside: avoid;
+}
+
+#about {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr 40ch;
+}
+
+#about h1 {
+  margin: 3pt 0 0;
+}
+
+#about h1 small {
+  display: block;
+  font-size: 17pt;
+  font-weight: normal;
+}
+
+#about address {
+  text-align: right;
+  font-style: normal;
+}
+
+#about address a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  grid-area: main;
+  background: white;
+  padding: 1ex;
+}
+
+.job {
+  break-inside: avoid;
+}
+
+.job h3 {
+  display: grid;
+  grid-template-areas: "title title title" "company time location";
+  grid-template-columns: 1fr 20ch 17ch;
+}
+
+.job h3 .title {
+  grid-area: title;
+}
+
+.job h3 .company {
+  grid-area: company;
+  font-weight: normal;
+}
+
+.job h3 .time {
+  grid-area: time;
+  font-weight: normal;
+  text-align: right;
+}
+
+.job h3 .location {
+  grid-area: location;
+  font-weight: normal;
+  text-align: right;
+}
+
+.job h4 {
+  margin: 1ex 0;
+}
+
+@media print {
+  #experience .job:nth-child(4) {
+    padding-top: 1em;
+  }
+}
+
+#education p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+aside {
+  grid-area: aside;
+  background: #cfe2f3;
+  padding: 1ex;
+}
+
+aside section {
+  break-inside: avoid;
+}
+
+@media print {
+  #other-interests h2 {
+    padding-top: 1em; 
+  }
+}
+
+#links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#links a {
+  text-decoration: none;
+  color: blue;
+}
+
+@media print {
+  #links a::after {
+    content: attr(href);
+    font-size: 9pt;
+    display: block;
+  }
+}
+
+#links img {
+  max-width: 1.1em;
+  max-height: 1.1em;
+  vertical-align: middle;
+  padding: 0 2pt 0 0;
+}
