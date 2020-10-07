@@ -17,6 +17,14 @@ ul {
   padding-left: 3ex;
 }
 
+body:not(.formal-swiss) .formal-swiss {
+  display: none;
+}
+
+body.formal-swiss .formal-swiss {
+  display: block;
+}
+
 html {
   background: #efefef;
   font-size: 13pt;
@@ -35,7 +43,7 @@ body {
 #content {
   display: grid;
   grid-template-areas: "header header" "main aside";
-  grid-template-rows: 10ex 1fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 1fr 30ch;
   grid-gap: 2px;
   
@@ -68,6 +76,10 @@ header {
   grid-template-columns: 1fr 40ch;
 }
 
+body.formal-swiss #about {
+  grid-template-columns: 1fr 40ch 9ex;
+}
+
 #about h1 {
   margin: 3pt 0 0;
 }
@@ -78,6 +90,10 @@ header {
   font-weight: normal;
 }
 
+body.formal-swiss #about h1 small {
+  font-size: 14pt;
+}
+
 #about address {
   text-align: right;
   font-style: normal;
@@ -86,6 +102,12 @@ header {
 #about address a {
   color: inherit;
   text-decoration: none;
+}
+
+#about img {
+  max-width: 95%;
+  max-height: 95%;
+  margin: 0 0 0 1ex;
 }
 
 main {
@@ -151,8 +173,12 @@ aside section {
 }
 
 @media print {
-  #other-interests h2 {
+  body:not(.formal-swiss) #other-interests h2 {
     padding-top: 1em; 
+  }
+
+  body.formal-swiss #languages h2 {
+    padding-top: 1em;
   }
 }
 
@@ -188,8 +214,15 @@ aside section {
 @media print {
   #online {
     display: block;
-    margin: 43em 0 0;
     font-size: 11pt;
+  }
+
+  body:not(.formal-swiss) #online {
+    margin: 43em 0 0;
+  }
+
+  body.formal-swiss #online {
+    margin: 25em 0 0;
   }
 }
 
@@ -204,7 +237,7 @@ footer {
   box-shadow: 0px 3px 6px black;
 }
 
-footer a {
+footer .right {
   float: right;
   text-decoration: none;
 }
