@@ -29,24 +29,29 @@ html {
 }
 
 body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#content {
   display: grid;
   grid-template-areas: "header header" "main aside";
   grid-template-rows: 10ex 1fr;
   grid-template-columns: 1fr 30ch;
   grid-gap: 2px;
-  background: white /*url(cv-code.png) no-repeat 450%*/;
-
+  
+  background: white;
   width: 21cm;
   margin: 1em auto;
   padding: 1.2cm 1.2cm;
 
-  font-family: "Source Sans Pro", sans-serif;
+  box-shadow: 0px 3px 6px black;
 }
 
 @media print {
-  body {
+  #content {
     margin: 0;
     padding: 0;
+    box-shadow: none;
   }
 }
 
@@ -161,6 +166,13 @@ aside section {
   color: blue;
 }
 
+#links img {
+  max-width: 1.1em;
+  max-height: 1.1em;
+  vertical-align: middle;
+  padding: 0 2pt 0 0;
+}
+
 @media print {
   #links a::after {
     content: attr(href);
@@ -169,9 +181,24 @@ aside section {
   }
 }
 
-#links img {
-  max-width: 1.1em;
-  max-height: 1.1em;
-  vertical-align: middle;
-  padding: 0 2pt 0 0;
+footer {
+  grid-area: footer;
+  border: 1px solid gray;
+
+  width: 21cm;
+  margin: 2em auto;
+  padding: 1.2cm 1.2cm;
+
+  box-shadow: 0px 3px 6px black;
+}
+
+footer a {
+  float: right;
+  text-decoration: none;
+}
+
+@media print {
+  footer {
+    display: none;
+  }
 }
