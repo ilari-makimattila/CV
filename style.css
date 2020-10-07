@@ -26,7 +26,8 @@ body.formal-swiss .formal-swiss {
 }
 
 html {
-  background: #efefef;
+  background: #efefef url(images/cv-code.png) no-repeat right bottom -160px;
+  background-size: 25%;
   font-size: 13pt;
 }
 
