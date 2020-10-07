@@ -181,6 +181,18 @@ aside section {
   }
 }
 
+#online {
+  display: none;
+}
+
+@media print {
+  #online {
+    display: block;
+    margin: 43em 0 0;
+    font-size: 11pt;
+  }
+}
+
 footer {
   grid-area: footer;
   border: 1px solid gray;
