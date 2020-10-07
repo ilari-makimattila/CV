@@ -101,7 +101,7 @@ main {
 .job h3 {
   display: grid;
   grid-template-areas: "title title title" "company time location";
-  grid-template-columns: 1fr 20ch 17ch;
+  grid-template-columns: 1fr 19ch 17ch;
 }
 
 .job h3 .title {
