@@ -35,6 +35,10 @@ html {
   html {
     background: white;
   }
+
+  a, a:visited {
+    color: blue;
+  }
 }
 
 body {
@@ -150,12 +154,6 @@ main {
 
 .job h4 {
   margin: 1ex 0;
-}
-
-@media print {
-  #experience .job:nth-child(4) {
-    padding-top: 1em;
-  }
 }
 
 #education p {
