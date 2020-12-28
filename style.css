@@ -45,6 +45,25 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+#recruiters {
+  background: white;
+}
+
+#recruiters p {
+  padding: 0;
+  margin: .2ex 0;
+}
+
+#recruiters p:first-child {
+  font-size: 120%;
+}
+
+@media print {
+  #recruiters {
+    display: none;
+  }
+}
+
 #content {
   display: grid;
   grid-template-areas: "header header" "main aside";
