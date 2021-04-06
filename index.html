@@ -50,7 +50,7 @@
             <a href="tel:+41793534520">+41 79 353 45 20</a><br>
             <a href="https://goo.gl/maps/kAYiqn4xz7rKdvtdA">Allmendstrasse 158, 8041 Zürich, Switzerland</a><br>
           </address>
-          <img class="formal-swiss" src="images/portrait.jpg" alt="Ilari Mäkimattila">
+          <img class="swiss" src="images/portrait.jpg" alt="Ilari Mäkimattila">
         </section>
       </header>
 
@@ -195,7 +195,7 @@
       </main>
 
       <aside>
-        <section id="profile" class="formal-swiss">
+        <section id="profile" class="swiss">
           <h2>Profile</h2>
           <p>
             Software Engineer with cloud focus capable of working in the full lifecycle of cloud software
@@ -256,7 +256,7 @@
           </ul>
         </section>
 
-        <section id="personal-data" class="formal-swiss">
+        <section id="personal-data" class="swiss">
           <h2>Personal Data</h2>
           <ul>
             <li>Date of Birth: <time datetime="1984-09-18">18.09.1984</time></li>
@@ -275,9 +275,9 @@
     <footer>
       <div class="right">
         <a href="CV_IlariMaekimattila.pdf">Download PDF</a><br>
-        <a href="CV_IlariMaekimattila_FormalSwiss.pdf">Download Formal Swiss PDF</a><br>
+        <a href="CV_IlariMaekimattila_Swiss.pdf">Download Swiss PDF</a><br>
         <br>
-        <a style="display:none" id="toggle-formal-swiss" href="#">Toggle formal Swiss version</a><br>
+        <a style="display:none" id="toggle-swiss" href="#">Toggle Swiss version</a><br>
         <br>
         <a href="https://github.com/ilari-makimattila/CV/tree/master/background-app">The code in the background</a>
       </div>
@@ -295,18 +295,18 @@
     </footer>
 
     <script>
-      const toggle = document.querySelector('#toggle-formal-swiss');
+      const toggle = document.querySelector('#toggle-swiss');
       toggle
         .addEventListener('click', (e) => {
           e.preventDefault();
-          const enabled = document.body.classList.toggle('formal-swiss');
-          window.history.pushState({formalSwiss: enabled}, 'Ilari Mäkimattila' + (enabled ? ' - Formal Swiss' : ''), (enabled ? '?formalSwiss=1' : '?'));
+          const enabled = document.body.classList.toggle('swiss');
+          window.history.pushState({swiss: enabled}, 'Ilari Mäkimattila' + (enabled ? ' - Swiss' : ''), (enabled ? '?swiss=1' : '?'));
           return false;
         });
       toggle.style.display = 'inline';
 
-      if (window.location.search.indexOf('formalSwiss=1') >= 0) {
-        document.body.classList.toggle('formal-swiss');
+      if (window.location.search.indexOf('swiss=1') >= 0) {
+        document.body.classList.toggle('swiss');
       }
     </script>
   </body>

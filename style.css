@@ -17,11 +17,11 @@ ul {
   padding-left: 3ex;
 }
 
-body:not(.formal-swiss) .formal-swiss {
+body:not(.swiss) .swiss {
   display: none;
 }
 
-body.formal-swiss .formal-swiss {
+body.swiss .swiss {
   display: block;
 }
 
@@ -100,7 +100,7 @@ header {
   grid-template-columns: 1fr 40ch;
 }
 
-body.formal-swiss #about {
+body.swiss #about {
   grid-template-columns: 1fr 40ch 9ex;
 }
 
@@ -114,7 +114,7 @@ body.formal-swiss #about {
   font-weight: normal;
 }
 
-body.formal-swiss #about h1 small {
+body.swiss #about h1 small {
   font-size: 14pt;
 }
 
@@ -191,11 +191,11 @@ aside section {
 }
 
 @media print {
-  body:not(.formal-swiss) #other-interests h2 {
+  body:not(.swiss) #other-interests h2 {
     padding-top: 1em; 
   }
 
-  body.formal-swiss #languages h2 {
+  body.swiss #languages h2 {
     padding-top: 1em;
   }
 }
@@ -235,11 +235,11 @@ aside section {
     font-size: 11pt;
   }
 
-  body:not(.formal-swiss) #online {
+  body:not(.swiss) #online {
     margin: 43em 0 0;
   }
 
-  body.formal-swiss #online {
+  body.swiss #online {
     margin: 25em 0 0;
   }
 }
