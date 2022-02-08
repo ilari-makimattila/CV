@@ -1,5 +1,4 @@
 @page {
-  margin: 1.2cm 1.2cm;
   size: A4 portrait;
   marks: none;
 }
@@ -69,12 +68,10 @@ body {
   grid-template-areas: "header header" "main aside";
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 30ch;
-  grid-gap: 2px;
   
   background: white;
   width: 21cm;
   margin: 1em auto;
-  padding: 1.2cm 1.2cm;
 
   box-shadow: 0px 3px 6px black;
 }
@@ -229,18 +226,24 @@ aside section {
   display: none;
 }
 
+#online p {
+  margin: 0;
+  padding: 0;
+}
+
 @media print {
   #online {
     display: block;
     font-size: 11pt;
+    padding: 0;
   }
 
   body:not(.swiss) #online {
-    margin: 43em 0 0;
+    margin: 42em 0 0;
   }
 
   body.swiss #online {
-    margin: 25em 0 0;
+    margin: 23em 0 0;
   }
 }
 
