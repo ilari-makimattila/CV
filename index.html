@@ -27,9 +27,9 @@
           <address>
             <a href="mailto:ilari.makimattila@gmail.com">ilari.makimattila@gmail.com</a><br>
             <a href="tel:+41793534520">+41 79 353 45 20</a><br>
-            <a href="https://goo.gl/maps/kAYiqn4xz7rKdvtdA">Allmendstrasse 158, 8041 Zürich, Switzerland</a><br>
+            <a href="https://goo.gl/maps/kAYiqn4xz7rKdvtdA">Allmendstrasse 158<br>8041 Zürich, Switzerland</a><br>
           </address>
-          <img class="swiss" src="images/portrait.jpg" alt="Ilari Mäkimattila">
+          <img id="portrait" src="images/portrait.jpg" alt="Ilari Mäkimattila">
         </section>
       </header>
 
@@ -49,8 +49,8 @@
             <ul>
               <li>Leading the technical effort on the virtual/hybrid events platform</li>
               <li>Wearing multiple hats: SWE, DevOps, Architect/Principal SWE, etc.</li>
-              <li>Migrated production environment from a monolithic app running on a single machine to cloud native microservices running on Kubernetes, saving up to 40% in operating costs</li>
-              <li>Introduced continuous delivery for automated deployments, saving hours of fortnightly work time</li>
+              <li>Migrated the app from a monolith in a single VM to microservices running on Kubernetes, saving up to 40% in operating costs</li>
+              <li>Introduced CI/CD, saving hours of fortnightly work time</li>
               <li>Tech stack: Python, Rust, TypeScript, Cloud PostgreSQL, Redis, Firebase, Docker, GCP, Terraform, Gitlab CI</li>
             </ul>
           </section>
@@ -95,7 +95,7 @@
               <li>Responsibility of payment provider integrations architecture</li>
               <li>Integrated the marketplace with Datatrans and ByJuno</li>
               <li>Implemented the foundation of the search and product data pipeline using AWS Lambda, DynamoDB, Elasticsearch, Node.js</li>
-              <li>Tech stack: Python 3, Django, Flask, PostgreSQL, Node.js, DynamoDB, Lambda, Serverless, Elasticsearch, AWS ECS, Terraform, GoCD</li>
+              <li>Tech stack: Python, Django, Flask, PostgreSQL, NodeJS, DynamoDB, Lambda, Serverless, Elasticsearch, AWS ECS, Terraform, GoCD</li>
             </ul>
           </section>
 
@@ -170,23 +170,23 @@
       </main>
 
       <aside>
-        <section id="profile" class="swiss">
-          <h2>Profile</h2>
-          <p>
-            Software Engineer with cloud focus capable of working in the full lifecycle of cloud software
-            from concept to maintenance.
-          </p>
+        <section id="profile">
+          <ul>
+            <li>Cloud Software Engineer with experience in more than a dozen projects since 2002.</li>
+            <li>Full stack polyglot and DevOps engineer</li>
+            <li>Passionate about Continuous Deployment</li>
+          </ul>
         </section>
 
         <section id="skills">
           <h2>Skills</h2>
           <ul>
-            <li><b>Python</b>: 6 years; Django, Flask, Sanic, SQLAlchemy, werkzeug, CPython, PyPy, etc.</li>
+            <li><b>Python</b>: 6 years; Django, Flask, FastAPI, etc.</li>
             <li><b>Rust</b>: 4 years; Rocket, actix-web, grpcio, diesel</li>
-            <li><b>C#</b>: 5 years; ASP.NET, .NET Core, Entity Framework, nHibernate</li>
+            <li><b>C#</b>: 5 years; ASP.NET, .NET Core, Entity Framework</li>
             <li><b>Bash/Unix</b>: 15+ years</li>
             <li><b>HTML/CSS</b>: 15+ years</li>
-            <li><b>JavaScript/Node</b>: 10+ years; Vue.js, Angular, Backbone, jQuery, Prototype, Express, Webpack, Gulp, Jasmine, Karma, etc.</li>
+            <li><b>JavaScript/Node</b>: 10+ years; Vue.js, Angular, jQuery, Express, Webpack, etc.</li>
             <li><b>PHP5+</b>: 5 years</li>
             <li><b>Ruby, Go, VB, F#, Clojure</b>: some work/hobby</li>
             <li><b>PostgreSQL</b>: 8 years</li>
@@ -195,7 +195,7 @@
             <li><b>Servers / IaC</b>: 7 years; Terraform, ARM</li>
             <li><b>CI/CD</b>: 10+ years; Jenkins, CircleCI, Travis, GitLab CI, GitHub Actions, GoCD</li>
             <li><b>Docker</b>: 5+ years</li>
-            <li><b>AWS</b>: 5 years; EC2, ECS, ASG, ELB, RDS, EFS, EBS, IAM, DynamoDB, Lambda, Backup, etc.</li>
+            <li><b>AWS</b>: 5 years; EC2, ECS, ASG, ELB, RDS, EFS, EBS, IAM, DynamoDB, Lambda, etc.</li>
             <li><b>Azure</b>: 3 years; Web Pages, Azure SQL, Azure AD, DocumentDB, Functions, etc.</li>
             <li><b>GCP</b>: 2 years; GKE, PubSub, Firebase, Cloud SQL, IAM, etc.</li>
           </ul>
@@ -229,7 +229,7 @@
           </ul>
         </section>
 
-        <section id="personal-data" class="swiss">
+        <section id="personal-data">
           <h2>Personal Data</h2>
           <ul>
             <li>Date of Birth: <time datetime="1984-09-18">18.09.1984</time></li>
@@ -248,9 +248,6 @@
     <footer>
       <div class="right">
         <a href="CV_IlariMaekimattila.pdf">Download PDF</a><br>
-        <a href="CV_IlariMaekimattila_Swiss.pdf">Download Swiss PDF</a><br>
-        <br>
-        <a style="display:none" id="toggle-swiss" href="#">Toggle Swiss version</a><br>
         <br>
         <a href="https://github.com/ilari-makimattila/CV/tree/master/background-app">The code in the background</a>
       </div>
@@ -259,28 +256,12 @@
         Print instructions:
         <ol>
           <li>Use Chrome. Firefox and grid printing isn't a good match.</li>
-          <li>Set margins to default.</li>
+          <li>Set margins to none.</li>
           <li>Deselect Headers and Footers.</li>
           <li>Select Background graphics.</li>
           <li>Print!</li>
         </ol>
       </div>
     </footer>
-
-    <script>
-      const toggle = document.querySelector('#toggle-swiss');
-      toggle
-        .addEventListener('click', (e) => {
-          e.preventDefault();
-          const enabled = document.body.classList.toggle('swiss');
-          window.history.pushState({swiss: enabled}, 'Ilari Mäkimattila' + (enabled ? ' - Swiss' : ''), (enabled ? '?swiss=1' : '?'));
-          return false;
-        });
-      toggle.style.display = 'inline';
-
-      if (window.location.search.indexOf('swiss=1') >= 0) {
-        document.body.classList.toggle('swiss');
-      }
-    </script>
   </body>
 </html>

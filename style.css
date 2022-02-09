@@ -16,12 +16,8 @@ ul {
   padding-left: 3ex;
 }
 
-body:not(.swiss) .swiss {
-  display: none;
-}
-
-body.swiss .swiss {
-  display: block;
+p {
+  margin: 0;
 }
 
 html {
@@ -94,25 +90,18 @@ header {
 #about {
   display: grid;
   grid-template-rows: 1;
-  grid-template-columns: 1fr 40ch;
-}
-
-body.swiss #about {
-  grid-template-columns: 1fr 40ch 9ex;
+  grid-template-columns: 1fr 25ch 12ex;
 }
 
 #about h1 {
   margin: 3pt 0 0;
+  font-size: 38pt;
 }
 
 #about h1 small {
   display: block;
-  font-size: 17pt;
-  font-weight: normal;
-}
-
-body.swiss #about h1 small {
   font-size: 14pt;
+  font-weight: normal;
 }
 
 #about address {
@@ -131,10 +120,18 @@ body.swiss #about h1 small {
   margin: 0 0 0 1ex;
 }
 
+#portrait {
+  border-radius: 50%;
+}
+
 main {
   grid-area: main;
   background: white;
-  padding: 1ex;
+  padding: 0 1ex 1ex;
+}
+
+#experience h2 {
+  margin-top: 0;
 }
 
 .job {
@@ -187,14 +184,12 @@ aside section {
   break-inside: avoid;
 }
 
-@media print {
-  body:not(.swiss) #other-interests h2 {
-    padding-top: 1em; 
-  }
+aside h2 {
+  margin: .5ex 0 0;
+}
 
-  body.swiss #languages h2 {
-    padding-top: 1em;
-  }
+#profile ul {
+    list-style-type: "✅";
 }
 
 #links ul {
@@ -236,14 +231,7 @@ aside section {
     display: block;
     font-size: 11pt;
     padding: 0;
-  }
-
-  body:not(.swiss) #online {
-    margin: 42em 0 0;
-  }
-
-  body.swiss #online {
-    margin: 23em 0 0;
+    margin: 24.9em 0 0;
   }
 }
 
