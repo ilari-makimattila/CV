@@ -13,7 +13,11 @@
   </head>
   <body>
     <div id="content">
-      <header>
+      <table class="print-layout-table">
+        <thead>
+          <tr>
+            <td>
+              <header>
         <section id="about">
           <h1>Ilari Mäkimattila <small>Cloud Software Engineer, Architect, DevOps</small></h1>
           <address>
@@ -24,8 +28,14 @@
           <img id="portrait" src="images/portrait.jpg" alt="Ilari Mäkimattila">
         </section>
       </header>
-
-      <main>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="main-aside-wrapper">
+                <main>
         <section id="experience">
           <h2>Experience</h2>
 
@@ -196,14 +206,15 @@
             <li><a href="https://github.com/ilari-makimattila"><img src="images/github.png" alt="GitHub"> GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/ilari-mäkimattila/"><img src="images/linkedin.png" alt="LinkedIn"> LinkedIn</a></li>
             <li><a href="https://www.chess.com/member/mirajious"><img src="images/chesscom.png" alt="Chess.com">Chess.com</a></li>
+            <li id="online"><a href="https://ilari-makimattila.github.io/CV/">CV online version</a></li>
           </ul>
         </section>
 
         <section id="skills">
           <h2>Skills</h2>
           <ul>
-            <li><b>Python</b>8 years; Django, Flask, FastAPI, SQLAlchemy, etc.</li>
             <li><b>Rust</b>8 years; axum, tokio, grpcio, diesel, SQLx, etc.</li>
+            <li><b>Python</b>8 years; Django, Flask, FastAPI, SQLAlchemy, etc.</li>
             <li><b>C#</b>5 years; ASP.NET, .NET Core, Entity Framework</li>
             <li><b>Bash/Linux</b>15+ years</li>
             <li><b>HTML/CSS</b>15+ years</li>
@@ -220,10 +231,12 @@
           </ul>
         </section>
 
-        <section id="online">
-          <p>Available online at<br><a href="https://ilari-makimattila.github.io/CV/">https://ilari-makimattila.github.io/CV/</a></p>
-        </section>
       </aside>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <footer>

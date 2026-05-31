@@ -430,6 +430,16 @@ footer li {
   margin-bottom: 0.25rem;
 }
 
+/* Screen mode: Ignore table boxes to preserve CSS Grid layout */
+.print-layout-table,
+.print-layout-table thead,
+.print-layout-table tbody,
+.print-layout-table tr,
+.print-layout-table td,
+.main-aside-wrapper {
+  display: contents;
+}
+
 @media print {
   :root {
     --bg-html: #ffffff;
@@ -453,12 +463,44 @@ footer li {
   }
 
   #content {
+    display: block;
     width: 100%;
     margin: 0;
     padding: 0;
     box-shadow: none;
     border-radius: 0;
     min-height: 0;
+  }
+
+  .print-layout-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .print-layout-table thead {
+    display: table-header-group;
+  }
+
+  .print-layout-table tbody {
+    display: table-row-group;
+  }
+
+  .print-layout-table tr {
+    display: table-row;
+    break-inside: avoid;
+  }
+
+  .print-layout-table td {
+    display: table-cell;
+    padding: 0;
+  }
+
+  .main-aside-wrapper {
+    display: grid;
+    grid-template-areas: "main aside";
+    grid-template-columns: 1fr 31ch;
+    width: 100%;
   }
 
   header {
@@ -484,10 +526,18 @@ footer li {
     border-left: 1px solid var(--border-fine);
   }
 
+  #links a {
+    flex-wrap: wrap;
+  }
+
   #links a::after {
-    content: " " attr(href);
-    font-size: 8pt;
+    content: attr(href);
+    flex-basis: 100%;
+    font-size: 6pt;
     color: var(--text-muted);
+    word-break: break-all;
+    padding-left: calc(15px + 0.5rem);
+    margin-top: 0;
   }
 
   #links img {
@@ -496,11 +546,7 @@ footer li {
   }
 
   #online {
-    display: block;
-    font-size: 9pt;
-    padding: 0;
-    margin: 3rem 0 0 0;
-    break-inside: avoid;
+    display: list-item;
   }
 
   footer {
